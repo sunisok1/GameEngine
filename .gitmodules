@@ -1,0 +1,3 @@
+[submodule "GameEngine"]
+	path = Asset/Framework
+	url = git@github.com:sunisok1/Framework.git
