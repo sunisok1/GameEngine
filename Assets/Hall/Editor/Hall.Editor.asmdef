@@ -1,0 +1,10 @@
+﻿{
+  "name": "Hall.Editor",
+  "references": [
+    "Hall",
+    "Core",
+    "Framework.ServiceImpl",
+    "Framework.Yggdrasil",
+    "UniTask"
+  ]
+}
