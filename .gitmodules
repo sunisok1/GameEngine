@@ -4,3 +4,6 @@
 [submodule "Console2048"]
 	path = "Assets/Game/Console2048"
 	url = https://github.com/sunisok1/Console2048.git
+[submodule "Assets/Game/Console2048"]
+	path = Assets/Game/Console2048
+	url = https://github.com/sunisok1/Console2048.git
