@@ -1,3 +1,6 @@
 [submodule "Framework"]
 	path = Framework
 	url = https://github.com/sunisok1/Framework.git
+[submodule "Console2048"]
+	path = Console2048
+	url = https://github.com/sunisok1/Console2048.git
