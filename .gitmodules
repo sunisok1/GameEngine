@@ -1,3 +1,6 @@
 [submodule "Framework"]
 	path = "Assets/Framework"
 	url = https://github.com/sunisok1/Framework.git
+[submodule "Assets/Game/Named"]
+	path = Assets/Game/Named
+	url = https://github.com/sunisok1/Named.git

@@ -4,5 +4,6 @@
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Assets/Framework" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Assets/Framework/Yggdrasil" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Assets/Game/Named" vcs="Git" />
   </component>
 </project>

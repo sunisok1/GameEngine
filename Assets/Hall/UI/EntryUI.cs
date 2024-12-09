@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using Core;
 using Cysharp.Threading.Tasks;
 using Framework.Yggdrasil;
@@ -16,11 +17,17 @@ namespace Hall.UI
 
         public async UniTask Init(IGamePack gamePack)
         {
-            var resourcesService = Injector.GetService<IResourcesService>();
             nameText.text = gamePack.Name;
-            if (!string.IsNullOrEmpty(gamePack.Icon))
-                iconImage.sprite = await resourcesService.LoadAsync<Sprite>(gamePack.Icon);
+            var path = gamePack.Icon;
+            await SetImage(path);
             button.onClick.AddListener(gamePack.LoadScene);
+        }
+
+        private async Task SetImage(string path)
+        {
+            var resourcesService = Injector.GetService<IResourcesService>();
+            if (!string.IsNullOrEmpty(path))
+                iconImage.sprite = await resourcesService.LoadAsync<Sprite>(path);
         }
     }
 }
