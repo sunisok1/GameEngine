@@ -7,6 +7,6 @@ public class Main : MonoBehaviour
     private async void Start()
     {
         await UniTask.WaitForSeconds(2);
-        SceneManager.LoadScene("Scene/GameHall");
+        SceneManager.LoadScene("Hall/GameHall");
     }
 }

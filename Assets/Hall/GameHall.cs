@@ -8,12 +8,12 @@ namespace Hall
 {
     public class GameHall : MonoBehaviour
     {
-        [FormerlySerializedAs("gamePackItemPrefab")] [SerializeField] private GameEntry gameEntryPrefab;
+        [FormerlySerializedAs("gameEntryUIPrefab")] [FormerlySerializedAs("gameEntryPrefab")] [SerializeField] private EntryUI entryUIPrefab;
         [SerializeField] private Transform content;
 
-        public GameEntry CreateGameEntry(IGamePack gamePack)
+        public EntryUI CreateGameEntry(IGamePack gamePack)
         {
-            var gamePackItem = Instantiate(gameEntryPrefab, content);
+            var gamePackItem = Instantiate(entryUIPrefab, content);
             gamePackItem.Init(gamePack).Forget();
             return gamePackItem;
         }

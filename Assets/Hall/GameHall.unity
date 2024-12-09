@@ -24,7 +24,7 @@ RenderSettings:
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 4
+  m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
@@ -295,7 +295,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1656795679}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.99999464
+  m_Size: 0.99482137
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -452,7 +452,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1216613332}
   - component: {fileID: 1216613331}
-  - component: {fileID: 1216613330}
+  - component: {fileID: 1216613333}
   m_Layer: 0
   m_Name: GameHall
   m_TagString: Untagged
@@ -460,18 +460,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1216613330
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1216613329}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afc708390aca4481bb20c6c742ca47ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1216613331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -484,7 +472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a545547458e85742a8eaa08c91c3581, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameEntryPrefab: {fileID: 302213594802175919, guid: 9930f3daaaff9f14f97e31d7d05278b8,
+  entryUIPrefab: {fileID: 302213594802175919, guid: 9930f3daaaff9f14f97e31d7d05278b8,
     type: 3}
   content: {fileID: 1593224327}
 --- !u!4 &1216613332
@@ -502,6 +490,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1216613333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216613329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e111dcae58d24b71986db2f9076d3a0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1225115241
 GameObject:
   m_ObjectHideFlags: 0
@@ -770,7 +770,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000024198947}
+  m_AnchoredPosition: {x: 0, y: 0.00018027597}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1593224328
