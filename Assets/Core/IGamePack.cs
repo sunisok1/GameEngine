@@ -1,7 +1,4 @@
-﻿using Framework.Yggdrasil;
-using Framework.Yggdrasil.Services;
-
-namespace Core
+﻿namespace Core
 {
     public interface IGamePack
     {
@@ -9,6 +6,5 @@ namespace Core
         string Path { get; }
         string Version { get; }
         string Icon { get; }
-        IGameService CreateGameService();
     }
 }

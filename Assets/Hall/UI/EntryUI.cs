@@ -26,17 +26,15 @@ namespace Hall.UI
             button.onClick.AddListener(LoadScene);
         }
 
-        private async void LoadScene()
+        private void LoadScene()
         {
             var sceneName = Path.Combine(m_gamePack.Path, "Game");
-            await SceneManager.LoadSceneAsync(sceneName);
-            var gameService = m_gamePack.CreateGameService();
-            gameService.Run();
+            SceneManager.LoadScene(sceneName);
         }
 
         private async Task SetImage(string path)
         {
-            var resourcesService = Injector.GetService<IResourcesService>();
+            var resourcesService = Injector.Instance.GetService<IResourcesService>();
             if (!string.IsNullOrEmpty(path))
                 iconImage.sprite = await resourcesService.LoadAsync<Sprite>(path);
         }
