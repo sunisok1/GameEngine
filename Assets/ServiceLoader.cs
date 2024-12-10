@@ -6,16 +6,15 @@ using UnityEngine;
 
 public class ServiceLoader : MonoBehaviour
 {
-    private ServiceInjector m_mInjector;
-
     private void Awake()
     {
         if (Injector.Initialized) return;
-        m_mInjector = Injector.SetInjector<ServiceInjector>();
-        m_mInjector.Register<ILoggerService, UnityLogger>();
-        m_mInjector.Register<IEventService, EventService>();
-        m_mInjector.Register<IResourcesService, ResourcesService>();
-        m_mInjector.Register<IUIService, UIService>();
-        m_mInjector.Register<IConfigService, ConfigService>();
+        Injector.SetInjector<ServiceInjector>();
+
+        Injector.Instance.Register<ILoggerService, UnityLogger>();
+        Injector.Instance.Register<IEventService, EventService>();
+        Injector.Instance.Register<IResourcesService, ResourcesService>();
+        Injector.Instance.Register<IUIService, UIService>();
+        Injector.Instance.Register<IConfigService, ConfigService>();
     }
 }

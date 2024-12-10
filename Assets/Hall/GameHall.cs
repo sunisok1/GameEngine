@@ -8,7 +8,9 @@ namespace Hall
 {
     public class GameHall : MonoBehaviour
     {
-        [FormerlySerializedAs("gameEntryUIPrefab")] [FormerlySerializedAs("gameEntryPrefab")] [SerializeField] private EntryUI entryUIPrefab;
+        [FormerlySerializedAs("gameEntryPrefab")] [SerializeField]
+        private EntryUI entryUIPrefab;
+
         [SerializeField] private Transform content;
 
         public EntryUI CreateGameEntry(IGamePack gamePack)

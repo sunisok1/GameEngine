@@ -1,5 +1,5 @@
-using System.IO;
-using UnityEngine.SceneManagement;
+﻿using Framework.Yggdrasil;
+using Framework.Yggdrasil.Services;
 
 namespace Core
 {
@@ -9,10 +9,6 @@ namespace Core
         string Path { get; }
         string Version { get; }
         string Icon { get; }
-
-        void LoadScene()
-        {
-            SceneManager.LoadScene(System.IO.Path.Combine(Path, "Game"));
-        }
+        IGameService CreateGameService();
     }
 }
