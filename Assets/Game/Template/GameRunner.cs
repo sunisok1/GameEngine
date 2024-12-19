@@ -1,4 +1,5 @@
-﻿using Core;
+﻿using System.Threading;
+using Core;
 using Framework.Yggdrasil;
 using Framework.Yggdrasil.Services;
 using JetBrains.Annotations;
@@ -36,6 +37,8 @@ namespace Game.Template
         public void OnRemove()
         {
         }
+
+        public CancellationToken CancellationToken { get; }
 
         public void Run()
         {

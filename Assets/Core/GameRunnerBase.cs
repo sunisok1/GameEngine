@@ -6,17 +6,17 @@ namespace Core
 {
     public abstract class GameRunnerBase<T> : MonoBehaviour where T : IGameService
     {
-        private IGameService m_gameService;
+        protected T GameService { get; private set; }
 
-        private void Start()
+        protected virtual void Start()
         {
-            m_gameService = Injector.Instance.Register<IGameService, T>();
-            m_gameService.Run();
+            GameService = Injector.Instance.Register<IGameService, T>();
+            GameService.Run();
         }
 
         private void OnApplicationFocus(bool hasFocus)
         {
-            m_gameService.OnApplicationFocus(hasFocus);
+            GameService.OnApplicationFocus(hasFocus);
         }
     }
 }
